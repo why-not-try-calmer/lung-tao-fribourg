@@ -1,0 +1,40 @@
+# Site settings
+title: "Lung Tao Fribourg"
+description: "Ecole de Kung-fu et Taichi"
+url: "https//rad-arithmetic-1f47b8.netlify.app"
+baseurl: ""
+# google_analytics: 'UA-XXXXXX-X'
+# disqus_shortname: 'your-disqus-name'
+# disable_landing_page: true
+
+author:
+  name: "Armando Quintana Wong"
+  email: quintanawong@hotmail.com
+  facebook_username: lungtaosuisse
+  
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+plugins: ["jekyll-paginate"]
+exclude: ["README.md", "Gemfile", "Gemfile.lock", "screenshot.png"]

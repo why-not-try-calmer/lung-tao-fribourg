@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<h2>Le maître et la tradition</h2>
+<ul>
+    {% for post in site.posts %}
+    {% if post.categories contains 'lungtao' %}
+    <li>
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </li>
+    {% endif %}
+    {% endfor %}
+</ul>
